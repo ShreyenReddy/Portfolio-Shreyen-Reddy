@@ -7,11 +7,17 @@
 
 body
 {
-     border: 20px solid #121212; 
+     border: 20px solid #1A1A1A; 
     margin: 0;
     min-height: 100vh;
     box-sizing: border-box; 
     /* padding: 5px; */
+}
+
+.secondary-page
+{
+    background-color: #6F8FAF;
+     /* background-color: #AFC4DA; Other option for background colour */
 }
 
 
@@ -42,11 +48,12 @@ body
     transform: translate(-50%, -50%);
     text-align: center;
     z-index: 2;
-    color: #FAFAFA;
+    color: #F5F7FA;
     font-size: 50px;
-    opacity: 0.6;
+    opacity: 0.4;
     
     font-family: "Abril Fatface", serif;
+    white-space: nowrap;
 }
 
 .subtitle-text
@@ -57,7 +64,7 @@ body
     transform: translate(-50%, -50%);
     text-align: center;
     z-index: 2;
-    color: #FAFAFA;
+    color: #F5F7FA;
     font-size: 25px;
     font-family:Georgia, 'Times New Roman', Times, serif; 
    
@@ -93,7 +100,7 @@ body
   background-color: #6F8FAF;
  margin: 5px;
  text-decoration: none;
- color:#FAFAFA;
+ color:#F5F7FA;
  border-radius: 8px;
  font-size: 20px;
  font-weight: 600;
@@ -102,9 +109,82 @@ body
 
 .nav-links a:hover
 {
-    background-color: #0f6fd1;
+    background-color: #02367B;
 
 }
+
+.subhero-text
+{
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    color: #F5F7FA;
+    font-size: 50px;
+    opacity: 0.1;
+    
+    font-family: "Abril Fatface", serif;
+    white-space: nowrap;
+}
+
+.nav-btns
+{
+    position:fixed;
+    top: 20px;
+    right: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 540px;
+    /* the gap controls spacing between buttons */
+    z-index: 10;
+}
+
+.home-btn 
+{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+}
+
+.home-btn img
+{
+    width: 60px;
+    height: auto;
+    display: block;
+    
+}
+
+
+.next-btn
+{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+   
+}
+
+.next-btn img
+{
+   
+    width: 60px;
+    height: auto;
+    display: block;
+}
+
+.home-btn:hover img,
+.next-btn:hover img
+{
+    filter: brightness(1.5); 
+     /* brightens on hover */
+    
+}
+
+
+
+
 
 
 
