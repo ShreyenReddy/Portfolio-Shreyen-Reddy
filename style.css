@@ -8,15 +8,9 @@
 body {
   border: 20px solid #1a1a1a;
   margin: 0;
-   height: 100vh;
-   overflow: hidden;
+  height: 100vh;
+  overflow: hidden;
   box-sizing: border-box;
-  
-}
-
-.no-scroll  
-{
-   overflow: hidden; /*completely turns off all scrolling , only want this on home page  */
 }
 
 .secondary-page {
@@ -68,7 +62,6 @@ body {
 
 .top-nav {
   grid-area: header;
-
   padding: 0 2rem;
   align-items: center;
   justify-content: space-between;
@@ -103,9 +96,39 @@ body {
   background-color: #02367b;
 }
 
+.secondary-nav-links {
+  position: fixed;
+  top: 10;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  padding: 20px;
+}
+
+.secondary-nav-links a {
+  display: inline-block;
+  padding: 0px 20px;
+  background-color: #333333;
+  margin: 5px;
+  text-decoration: none;
+  color: #f5f7fa;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Alegreya Sans SC", sans-serif;
+}
+
+.secondary-nav-links a:hover {
+  filter: brightness(1.5);
+  /* brightens on hover */
+}
+
 .subhero-text {
   position: absolute;
-  top: 15%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -118,21 +141,14 @@ body {
   white-space: nowrap;
 }
 
-.nav-btns {
-  position: fixed;
-  top: 20px;
-  right: 25px;
-  display: flex;
-  flex-direction: column;
-  gap: 535px;
-  /* the gap controls spacing between buttons */
-  z-index: 10;
-}
-
 .home-btn {
+  position: fixed;
+  top: 30px;
+  right: 30px;
   background: transparent;
   border: none;
   cursor: pointer;
+  z-index: 10;
 }
 
 .home-btn img {
@@ -142,9 +158,13 @@ body {
 }
 
 .next-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
   background: transparent;
   border: none;
   cursor: pointer;
+  z-index: 10;
 }
 
 .next-btn img {
@@ -169,7 +189,7 @@ body {
   gap: 100px;
   justify-content: center;
 
-  padding: 200px 20px;
+  padding: 225px 20px;
   flex-wrap: wrap;
 
   align-items: center;
@@ -183,7 +203,7 @@ body {
   width: 300px;
   height: 400px;
 
-   /* Cloud shape using border-radius
+  /* Cloud shape using border-radius
   border-radius: 50% 50% 50% 50% / 30% 30% 30% 30%;
   box-shadow:
     0 0 0 18px rgba(255,255,255,0.3),
@@ -226,7 +246,6 @@ body {
   font-size: 16px;
   list-style: none;
   padding-left: 0;
- 
 }
 
 .card-list li {
@@ -241,5 +260,3 @@ body {
   margin-top: 18px;
   margin-bottom: 6px;
 }
-
-
