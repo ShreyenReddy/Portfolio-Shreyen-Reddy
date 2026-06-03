@@ -3,7 +3,7 @@ const projects = [
     id: 1,
     title: "Morabaraba Game",
     description:
-    "Collaborated in a team to develop a feature-rich Morabaraba game in Unity with support for local multiplayer, online multiplayer via Photon PUN 2, and AI opponents. The project includes custom game logic, networked gameplay, and three selectable visual themes: Base Game, Star Wars, and Jujutsu Kaisen, providing a unique twist on the traditional African strategy board game.",
+      "Collaborated in a team to develop a feature-rich Morabaraba game in Unity with support for local multiplayer, online multiplayer via Photon PUN 2, and AI opponents. The project includes custom game logic, networked gameplay, and three selectable visual themes: Base Game, Star Wars, and Jujutsu Kaisen, providing a unique twist on the traditional African strategy board game.",
     coverimg: "./imgs/Morabaraba_profile_img.png",
     stack: ["C#", "Unity 3D", "Unity's Photon Pun 2"],
     githubRepo: "https://github.com/KyuriR/ELEN3020Morabaraba",
@@ -20,7 +20,8 @@ const projects = [
   {
     id: 3,
     title: "Reptile Dysfunction",
-    description: "Collaborated in a team to develop a narrative-driven 3D game in Unity, with all assets modelled in Blender and imported into the engine. The game follows a space lizard protagonist who crash-lands on Earth and must explore the environment, collect ship parts, and repair their spacecraft to return home. ",
+    description:
+      "Collaborated in a team to develop a narrative-driven 3D game in Unity, with all assets modelled in Blender and imported into the engine. The game follows a space lizard protagonist who crash-lands on Earth and must explore the environment, collect ship parts, and repair their spacecraft to return home. ",
     coverimg: "./imgs/Reptile-Dysfunction-game.png",
     stack: ["Blender", "C#", "Unity 3D"],
     githubRepo: "https://github.com/Ashrhay/Final_GD_2024",
@@ -28,7 +29,8 @@ const projects = [
   {
     id: 4,
     title: "Surviving the world cup Game",
-    description: "Developed a Unity 6 survival game inspired by the 2026 World Cup, where the player controls the football instead of a traditional player. The objective is to evade AI-controlled international footballers attempting to kick the ball, with gameplay focused on movement, avoidance mechanics, and collision-based interactions.",
+    description:
+      "Developed a Unity 6 survival game inspired by the 2026 World Cup, where the player controls the football instead of a traditional player. The objective is to evade AI-controlled international footballers attempting to kick the ball, with gameplay focused on movement, avoidance mechanics, and collision-based interactions.",
     coverimg: "./imgs/surviving-the-world-cup-new.png",
     stack: ["C#", "Unity 3D"],
     githubRepo: "www",
@@ -105,45 +107,36 @@ projects.map((project, index) => {
   }
 });
 // //Filter that allow users to view projects based on the technology/stack
-const categoryFilter= document.querySelector("#category-filter");
+const categoryFilter = document.querySelector("#category-filter");
 
-categoryFilter.addEventListener("change",function(event)
-{
-  const selectedStack=event.target.value;
+categoryFilter.addEventListener("change", function (event) {
+  const selectedStack = event.target.value;
 
-  const filteredProjects=projects.filter(project=>
-  {
-    if(selectedStack==="all")
-    {
+  const filteredProjects = projects.filter((project) => {
+    if (selectedStack === "all") {
       return project;
-    }
-    else
-    {
-      return project.stack.includes(selectedStack)
+    } else {
+      return project.stack.includes(selectedStack);
     }
   });
 
   renderProjects(filteredProjects);
 });
 
-function renderProjects(filteredProjects)
-{
-  container.innerHTML=""; //clears existing cards
+function renderProjects(filteredProjects) {
+  container.innerHTML = ""; //clears existing cards
 
-  filteredProjects.map((project,index)=>{
-    const card=createProjectCard(project);
-    if(index===0)
-      {
+  filteredProjects.map((project, index) => {
+    const card = createProjectCard(project);
+    if (index === 0) {
       card.classList.add("card-featured");
       container.appendChild(card);
 
-      const row=document.createElement("div");
+      const row = document.createElement("div");
       row.classList.add("card-row");
-      row.id="card-row";
+      row.id = "card-row";
       container.appendChild(row);
-    }
-    else
-    {
+    } else {
       document.querySelector("#card-row").appendChild(card);
     }
   });
@@ -169,24 +162,18 @@ function renderProjects(filteredProjects)
 //   });
 // }
 
+const filterBtn = document.querySelector(".filter-btn");
 
-
-const filterBtn= document.querySelector(".filter-btn");
-
-
-filterBtn.addEventListener("click",function() {
-  if(categoryFilter.style.display==="block")
-  {
-    categoryFilter.style.display="none"
-  }
-  else
-  {
-    categoryFilter.style.display="block"
+filterBtn.addEventListener("click", function () {
+  if (categoryFilter.style.display === "block") {
+    categoryFilter.style.display = "none";
+  } else {
+    categoryFilter.style.display = "block";
   }
 });
 // filterBtn.addEventListener("click",function(event)=>
 // {
-   
+
 // });
 
 // //Category Filter
@@ -224,13 +211,13 @@ filterBtn.addEventListener("click",function() {
 //     card.classList.add("job-card");
 //     card.setAttribute('data-id',job.id);
 
-//     card.innerHTML= 
+//     card.innerHTML=
 //     `<h2>${job.title}</h2>
 //     <p>${job.company} - ${job.location}</p>
 //     <p>R${job.salary} / month</p>
-   
+
 //     <div class="job-details hidden">
-//     <p> Type: ${job.type}</p> 
+//     <p> Type: ${job.type}</p>
 //     <p>About the role: ${job.description}</p>
 //     </div>
 //     `;
