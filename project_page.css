@@ -18,42 +18,6 @@ body {
   /* background-color: #AFC4DA; Other option for background colour */
 }
 
-.hero {
-  position: relative;
-}
-
-.hero-image {
-  width: 100%;
-  height: 100vh; /*change to 100 if they dont like scrolling thing*/
-  opacity: 1;
-  object-fit: cover;
-  display: block;
-  justify-content: center;
-}
-
-.hero-text {
-  position: absolute;
-  top: 40%;
-  left: 70%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  z-index: 2;
-  color: #f5f7fa;
-  font-size: 50px;
-  opacity: 0.4;
-
-  font-family: "Abril Fatface", serif;
-  white-space: nowrap;
-}
-
-.section-title {
-  font-family: "Alegreya Sans SC", sans-serif;
-  color: #1a1a1a;
-  margin-bottom: 15px;
-  font-size: 24px;
-  font-weight: 200;
-}
-
 .subhero-text {
   position: absolute;
   top: 20%;
@@ -63,7 +27,7 @@ body {
   z-index: 2;
   color: #f5f7fa;
   font-size: 50px;
-  opacity: 0.1;
+  opacity: 0.2;
 
   font-family: "Abril Fatface", serif;
   white-space: nowrap;
@@ -131,8 +95,27 @@ body {
   display: block;
 }
 
+.filter-btn {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.filter-btn img {
+  width: 60px;
+  height:auto;
+  display:block;
+ 
+  
+}
+
 .home-btn:hover img,
-.next-btn:hover img {
+.next-btn:hover img,
+.filter-btn:hover img {
   filter: brightness(1.5);
   /* brightens on hover */
 }
@@ -146,12 +129,12 @@ body {
 
   align-items: center;
   min-height: 100vh;
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 .card {
   background-color: #f5f7fa;
-  border-radius: 12px;
+  border-radius: 20px;
   padding: 15px;
   width: 300px;
   height: 300px;
@@ -167,28 +150,43 @@ body {
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
+    /* will keep stack and githubLink at bottom of card always*/
+    display: flex;        
+  flex-direction: column; 
 }
 
 .card-featured {
-  width: 600px;
-  height: auto;
-  padding: 30px;
+  width: 700px;
+  height: 550px;
+  padding: 20px; /* inside padding of info in card */
+
+  align-items: center;
 }
 
 .card-featured .card-img {
-  height: 160px;
   width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: fill; /* fill the cover space , contain and cover were scaling img */
+  margin-bottom: 10px;
 }
 
 .card-row {
   display: flex;
-  gap: 100px;
+  gap: 100px; /*gap between cards in row */
   justify-content: center;
   flex-wrap: wrap;
 }
 
 .card-row .card {
-  width: 220px;
+  width: 300px;
+  height: 450px;
+}
+
+.card-row .card-img {
+  height: 40%;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 .card:hover {
@@ -201,55 +199,29 @@ body {
 }
 
 .card-divider {
-  width: 300px;
-  height: 3px;
+  width: 100%;
+  height: 5px;
   background-color: #6f8faf;
-  margin: 0 auto 18px auto;
+  margin: 0 0 16px;
   border-radius: 2px;
 }
 
-.card-list {
-  color: #1a1a1a;
-  font-size: 16px;
-  list-style: none;
-  padding-left: 0;
-}
-
-.card-list li {
-  margin-bottom: 3px;
-  padding-left: 5px;
-}
-
-.card-subheading {
-  font-family: "Alegreya Sans SC", sans-serif;
-  font-size: 18px;
-  color: #1a1a1a;
-  margin-top: 18px;
-  margin-bottom: 6px;
-}
-
-.card-img {
-  width: 100%;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin: 8px 0;
-}
 
 .card-title {
-  font-family: "Alegreya Sans SC", sans-serif;
-  font-size: 16px;
-  color: #1a1a1a;
+ font-family: "Alegreya Sans SC", sans-serif;
+  font-size: 18px;
+  color: #02367B;
   margin-bottom: 4px;
 }
 
 .card-featured .card-title {
-  font-size: 22px;
+  font-size: 26px;
 }
 
 .card-description {
-  font-size: 12px;
+  font-size: 14px;
   color: #1a1a1a;
+  /* margin-bottom: 20px; */
 }
 
 .card-featured .card-description {
@@ -258,10 +230,45 @@ body {
 
 .card-stack {
   font-size: 11px;
-  color: #555;
+  color: #1A1A1A;
+  width:100%;
   background-color: #e0e0e0;
+  border-radius: 6px;
+  padding: 4px 8px;
+  margin-top: auto;
+  text-align: center;
+}
+
+/* Filter Button Code  */
+
+.card-githubLink  {
+  font-size: 11px;
+  color: #1A1A1A;
+  background-color: #E0E0E0;
+  width:100%;
   border-radius: 6px;
   padding: 4px 8px;
   margin-top: 8px;
   text-align: center;
+  text-decoration: none; /* removes the underline from link */
+  display: inline-block; /* makes padding apply in the correct way*/
+}
+
+.card-githubLink:hover
+{
+  background-color:#6f8faf;
+}
+
+#category-filter {
+  display: none;
+  position: fixed;
+  top: 100px;   /* sits just below the filter btn */
+  left: 30px;
+  z-index: 10;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #3a3a3a;
+  color: #f5f7fa;
+  border: none;
+  cursor: pointer;
 }
