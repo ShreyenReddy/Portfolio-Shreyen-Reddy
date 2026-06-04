@@ -106,6 +106,7 @@ projects.map((project, index) => {
     document.querySelector("#card-row").appendChild(card);
   }
 });
+//Filter Btn Code 
 // //Filter that allow users to view projects based on the technology/stack
 const categoryFilter = document.querySelector("#category-filter");
 
@@ -161,7 +162,7 @@ function renderProjects(filteredProjects) {
 //     }
 //   });
 // }
-
+//Controls dropdown feature of filter button
 const filterBtn = document.querySelector(".filter-btn");
 
 filterBtn.addEventListener("click", function () {
