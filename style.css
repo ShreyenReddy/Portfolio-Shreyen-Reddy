@@ -24,7 +24,7 @@ body {
 
 .hero-image {
   width: 100%;
-  height: 96vh; /*change to 100 if they dont like scrolling thing*/
+   height: calc(100vh - 40px); /* always fills exactly the screen height minus the borders */
   opacity: 1;
   object-fit: cover;
   display: block;
@@ -134,7 +134,7 @@ body {
   text-align: center;
   z-index: 2;
   color: #f5f7fa;
-  font-size: 50px;
+  font-size: 3rem;
   opacity: 0.1;
 
   font-family: "Abril Fatface", serif;
@@ -278,8 +278,8 @@ body {
   .menu-btn {
     display: block;
     position: fixed;
-    top: 30px;
-    left: 30px;
+    top: 45px;
+    left: 45px;
     background: transparent;
     border: none;
     cursor: pointer;
@@ -287,7 +287,7 @@ body {
   }
 
   .menu-btn img {
-    width: 40px;
+    width: 60px;
     height: auto;
     display: block;
   }
@@ -322,6 +322,46 @@ body {
   }
 }
 
+@media( max-width:1180px)
+{
+   body{
+    
+    height: calc(100vh-10px );
+
+   }
+
+   .card-container{
+    flex-direction: column; /*better for components , cards are components, grid better for entire site */
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 50px;
+    padding: 450px 20px 20px 20px;
+    max-height: 90vh; 
+    overflow-y: auto; /* allow cards themself to scroll not entire page 
+    
+    /* padding-top: 150px; */
+   }
+
+   .card{
+    width: 60%;
+    height: auto; /*grows with content*/
+    flex-shrink: 0;
+   }
+
+   .subhero-text{
+    font-size: 2rem;
+    top: 10%;
+   }
+   .next-btn{
+    display: none;
+   }
+   
+
+
+
+
+}
+
 @media (max-width: 877px) {
 
   .hero-text{
@@ -334,5 +374,69 @@ body {
    font-size: 1rem;
    top:25%;
    left: 50%;
+}
+}
+
+
+@media (max-width: 540px)
+{
+
+  .card-container{
+    flex-direction: column; /*better for components , cards are components, grid better for entire site */
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 40px;
+    padding: 500px 10px 10px 10px ;
+    max-height:calc(100vh - 140px) ;
+    overflow-y: auto; /* allow cards themself to scroll not entire page 
+    
+    /* padding-top: 150px; */
+   }
+    .card{
+    width: 85%;
+    height: auto; /*grows with content*/
+    flex-shrink: 0;
+   }
+
+   .menu-btn{
+    top:3%;
+    left:5%;
+   }
+
+   .menu-btn img {
+    width: 40px;
+    height: auto;
+    display: block;
+   }
+
+   .home-btn{
+    top:3%;
+    right:5%;
+   }
+
+   .home-btn img {
+    width: 40px;
+    height: auto;
+    display: block;
+   }
+}
+
+@media (max-width:390px)
+{
+  .card-container{
+    flex-direction: column; /*better for components , cards are components, grid better for entire site */
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 40px;
+    padding: 800px 10px 10px 10px ;
+    max-height:calc(100vh - 140px) ;
+    overflow-y: auto; /* allow cards themself to scroll not entire page 
+    
+    /* padding-top: 150px; */
+   }
+    .card{
+    width: 80%;
+    height: auto; /*grows with content*/
+    flex-shrink: 0;
 }
 }
