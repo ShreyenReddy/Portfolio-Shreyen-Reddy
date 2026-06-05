@@ -6,6 +6,7 @@
     <title>Projects Section</title>
     <link rel="stylesheet" href="project_page.css" />
     <script src="main.js" defer></script>
+    <script src="responsiveness.js" defer></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
       rel="stylesheet"
@@ -35,8 +36,19 @@
       </button>
 
       <button class="filter-btn">
-        <img src="./imgs/filter-btn.png" alt="Filter Btn"/>
+        <img src="./imgs/filter-btn.png" alt="Filter Btn" />
       </button>
+    </div>
+
+    <button class="menu-btn">
+      <img src="./imgs/menu-btn.png" alt="Menu" />
+    </button>
+
+    <div class="dropdown-content" id="dropdown">
+      <a href="about.html">About Me</a>
+      <a href="projects.html">Projects</a>
+      <a href="education.html">Education</a>
+      <a href="skills.html">Skills</a>
     </div>
 
     <div class="subhero-text">
@@ -50,13 +62,11 @@
     </main>
 
     <select id="category-filter">
-  <option value="all">All</option>
-  <option value="C#">C#</option>
-  <option value="Unity 3D">Unity 3D</option>
-  <option value="C++">C++</option>
-  <option value="Blender">Blender</option>
-</select>
-
-
+      <option value="all">All</option>
+      <option value="C#">C#</option>
+      <option value="Unity 3D">Unity 3D</option>
+      <option value="C++">C++</option>
+      <option value="Blender">Blender</option>
+    </select>
   </body>
 </html>

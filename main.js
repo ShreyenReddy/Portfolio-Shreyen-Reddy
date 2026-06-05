@@ -106,7 +106,7 @@ projects.map((project, index) => {
     document.querySelector("#card-row").appendChild(card);
   }
 });
-//Filter Btn Code 
+//Filter Btn Code
 // //Filter that allow users to view projects based on the technology/stack
 const categoryFilter = document.querySelector("#category-filter");
 
