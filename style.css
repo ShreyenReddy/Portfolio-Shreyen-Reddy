@@ -189,7 +189,7 @@ body {
   gap: 100px;
   justify-content: center;
 
-  padding: 225px 20px;
+  padding: 120px 20px;
   flex-wrap: wrap;
 
   align-items: center;
@@ -266,6 +266,15 @@ body {
   display: none;
 }
 
+
+@media(max-width:1940px)
+{
+    .card-container
+    {
+      margin: 100px 20px 20px 20px;
+    }
+}
+
 @media (max-width: 1255px) {
   .top-nav {
     display: none;
@@ -284,6 +293,11 @@ body {
     border: none;
     cursor: pointer;
     z-index: 10;
+  }
+
+  .home-btn{
+    top: 40px;
+    right:45px;
   }
 
   .menu-btn img {
@@ -320,13 +334,15 @@ body {
     background-color: #02367b;
     border-radius: 8px;
   }
+
+
 }
 
-@media( max-width:1180px)
+@media( max-width:1220px)
 {
    body{
     
-    height: calc(100vh-10px );
+    height: calc(100vh-20px );
 
    }
 
@@ -335,8 +351,8 @@ body {
     flex-wrap: nowrap;
     align-items: center;
     gap: 50px;
-    padding: 450px 20px 20px 20px;
-    max-height: 90vh; 
+    padding: 250px 10px 10px 10px;
+    max-height: calc(100vh - 140px);
     overflow-y: auto; /* allow cards themself to scroll not entire page 
     
     /* padding-top: 150px; */
@@ -375,10 +391,23 @@ body {
    top:25%;
    left: 50%;
 }
+
+.card-container
+    {
+      padding: 350px 10px 10px 10px;
+    }
+}
+
+@media( max-width:795px)
+{
+  .card-container
+    {
+      padding: 350px 10px 10px 10px;
+    }
 }
 
 
-@media (max-width: 540px)
+@media (max-width: 705px)
 {
 
   .card-container{
@@ -386,7 +415,7 @@ body {
     flex-wrap: nowrap;
     align-items: center;
     gap: 40px;
-    padding: 500px 10px 10px 10px ;
+    padding: 300px 10px 10px 10px ;
     max-height:calc(100vh - 140px) ;
     overflow-y: auto; /* allow cards themself to scroll not entire page 
     
@@ -421,22 +450,119 @@ body {
    }
 }
 
-@media (max-width:390px)
+@media(max-width:540px)
 {
   .card-container{
-    flex-direction: column; /*better for components , cards are components, grid better for entire site */
-    flex-wrap: nowrap;
-    align-items: center;
-    gap: 40px;
-    padding: 800px 10px 10px 10px ;
-    max-height:calc(100vh - 140px) ;
-    overflow-y: auto; /* allow cards themself to scroll not entire page 
+    padding:500px 5px 5px 5px;
     
-    /* padding-top: 150px; */
+  }
+  .card{
+    width:70%;
+  }
+  .section-title{
+    text-align: center;
+  }
+
+   .card:hover{
+     box-shadow:
+    0 0 0 14px rgba(255, 255, 255, 0.35),
+    0 0 0 28px rgba(255, 255, 255, 0.2),
+    0 6px 30px rgba(0, 0, 0, 0.2);
+   }
+}
+
+@media (max-width:470px)
+{
+  .card-container{
+    padding:550px 15px 5px 15px;
+    overflow-y: auto;
+    overflow-x: hidden;
    }
     .card{
-    width: 80%;
+    width: 90%;
     height: auto; /*grows with content*/
     flex-shrink: 0;
+    overflow: visible;
 }
+}
+
+@media (max-width:400px)
+{
+  .card-container{
+    padding:600px 15px 15px 15px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  
+  .card{
+    width:90%;
+    height:auto;
+    flex-shrink: 0;
+    overflow: visible;
+  }
+
+  .menu-btn img{
+    width:30px;
+  }
+
+  .home-btn img{
+    width:40px;
+  }
+
+  .card:hover{
+     box-shadow:
+    0 0 0 12x rgba(255, 255, 255, 0.35),
+    0 0 0 20px rgba(255, 255, 255, 0.2),
+    0 4px 24px rgba(0, 0, 0, 0.2);
+   }
+}
+
+@media (max-width:375px)
+{
+  .card-container{
+    padding:700px 5px 5px 5px;
+    gap:30px;
+    overflow-y:auto;
+    overflow-x: visible;
+  }
+
+  .subhero-text{
+    font-size: 1.5rem;
+  }
+
+  .card{
+    width:95%;
+    height:auto;
+    max-height: 300px;
+    overflow-y: auto;
+    word-wrap:break-word;
+    overflow-wrap: break-word;
+    font-size: 10px;
+    text-align: left;
+   
+  }
+
+  .menu-btn{
+    left:8%;
+  }
+
+  .home-btn{
+    right:8%;
+  }
+
+  .hero-text{
+    font-size: 1.8rem;
+    top:15%;
+  }
+
+  .subtitle-text{
+   top:20%;
+  }
+
+  .card:hover{
+     box-shadow:
+    0 0 0 8px rgba(255, 255, 255, 0.35),
+    0 0 0 12px rgba(255, 255, 255, 0.2),
+    0 2px 14px rgba(0, 0, 0, 0.2);
+   }
 }
