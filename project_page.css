@@ -26,7 +26,7 @@ body {
   text-align: center;
   z-index: 2;
   color: #f5f7fa;
-  font-size: 50px;
+  font-size: 3rem;
   opacity: 0.2;
 
   font-family: "Abril Fatface", serif;
@@ -263,8 +263,189 @@ body {
   z-index: 10;
   padding: 8px;
   border-radius: 8px;
-  background-color: #3a3a3a;
+  background-color: #1a1a1a;
   color: #f5f7fa;
   border: none;
   cursor: pointer;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-size: 16px;
 }
+
+.menu-btn,
+.dropdown-content {
+  display: none;
+}
+
+
+@media(max-width:1940px)
+{
+  .card-container {
+    margin: 100px;
+  }
+}
+
+@media(max-width:1440px)
+{
+  .card-container{
+    margin:125px;
+  }
+}
+
+@media(max-width:1318px)
+{
+  .card-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .card-featured{
+    width:70%;
+  }
+
+  .card-row .card {
+    width: 60%;
+    height: 400px;       
+    max-height: 600px;    
+    
+      /* hide any overflow content */
+  }
+
+  .card-row .card-img {
+    height: 50%;          
+    width: 100%;
+    object-fit: cover;    
+    object-position: top;
+  }
+
+  .card-featured .card-img{
+    object-fit: cover;
+   object-position: top;
+  }
+}
+
+@media(max-width:977px)
+{
+  .top-nav {
+    display: none;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .card-container{
+    padding: 150px 20px 20px 20px;
+  }
+
+  .home-btn {
+    top:5%;
+   right:5%;
+  }
+
+  .filter-btn{
+    top:15%;
+    left:auto; /*cancel out left positioning */
+    right:5%;    
+          
+  }
+
+  .filter-btn img{
+    width: 60px;
+    height: auto;
+    display: block;
+  }
+
+  #category-filter{
+    top:22%;
+   right:8%;
+   left:auto;
+  }
+
+
+  .menu-btn {
+    display: block;
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+   .menu-btn img {
+    width: 60px;
+    height: auto;
+    display: block;
+  }
+
+  .menu-btn:hover img {
+    filter: brightness(1.5);
+  }
+
+  .dropdown-content {
+    display: none;
+    position: fixed;
+    top: 110px;
+    left: 30px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    z-index: 10;
+    min-width: 150px;
+  }
+
+  .dropdown-content a {
+    display: block;
+    padding: 12px 20px;
+    color: #f5f7fa;
+    text-decoration: none;
+    font-family: "Alegreya Sans SC", sans-serif;
+    font-size: 16px;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #02367b;
+    border-radius: 8px;
+  }
+
+  .next-btn {
+    display: none;
+  }
+}
+
+@media(max-width:810px)
+{
+    .card-row .card {
+    width: 60%;
+    height: 500px;       
+    max-height: 600px; 
+    
+}
+
+.card-container{
+    padding: 80px 20px 20px 20px;
+  }
+
+
+
+.subhero-text{
+   font-size: 2rem;
+   top: 15%;
+}
+
+.card-title{
+  font-size: 16px;
+}
+
+.card-featured .card-title {
+  font-size: 24px;
+}
+
+
+
+
+
+}
+
+
