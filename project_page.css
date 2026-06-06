@@ -334,8 +334,26 @@ body {
     display: none;
   }
 
+  .next-btn{
+    display: none;
+  }
+
+
+
+  .card-featured
+  {
+    width:650px;
+    height:600px;
+  }
+
   .card-container{
     padding: 150px 20px 20px 20px;
+  }
+
+  .card-row .card {
+    width: 80%;
+    height: 500px;       
+    max-height: 500px; 
   }
 
   .home-btn {
@@ -416,10 +434,16 @@ body {
 
 @media(max-width:810px)
 {
+
+  .card-featured
+  {
+    width:550px;
+    height:550px;
+  }
     .card-row .card {
-    width: 60%;
-    height: 500px;       
-    max-height: 600px; 
+    width: 100%;
+    height: 450px;       
+    max-height: 500px; 
     
 }
 
@@ -442,10 +466,310 @@ body {
   font-size: 24px;
 }
 
+.card-row .card-divider{
+  width:100%;
+  flex-shrink: 0;
+}
+}
+
+@media(max-width:740px)
+{
+
+  .card-featured{
+    width:500px;
+    height: auto;
+    max-height: 600px;
+    padding:20px;
+  }
+
+  .card-featured .card-stack
+  {
+    margin-top:20px;
+  }
+
+  .card-featured .card-img 
+  {
+    width:90%;
+    object-fit: fill;
+  }
+
+  .card-featured .card-description {
+  font-size: 14px;
+}
+
+.card-featured .card-divider{
+  flex-shrink: 0;
+}
+   .card-row .card
+   {
+    width: 450px;
+    height: 400px;       
+    max-height: 500px; 
+   }
+
+   .card-row .card-description
+   {
+    font-size: 12px;
+   }
+
+}
+
+@media (max-width:625px)
+{
+  .card-row .card{
+    width:400px;
+    height:450px;
+  }
+
+  .card-featured
+  {
+    width:450px;
+  }
+
+  .home-btn img{
+    width:45px;
+  }
+
+  .menu-btn img  
+  {
+     width:45px;
+  }
+
+  .filter-btn{
+    top:12%;
+  }
+
+  #category-filter{
+    top:18%;
+  
+  }
 
 
+
+  .filter-btn img{
+    width:45px;
+  }
+
+  .card-row .card-img
+{
+  object-fit: fill;
+}
 
 
 }
+
+@media (max-width:575px)  
+{
+    .card-featured .card-description
+    {
+      font-size: 12px;
+    }
+
+    .card-featured .card-title
+    {
+      font-size: 20px;
+    }
+
+    .card-featured{
+      width:400px;
+      height:auto;
+      max-height:500px;
+      padding:20px;
+    }
+
+    .card-featured .card-divider{
+      flex-shrink: 0;
+    }
+
+    .card-stack {
+  font-size: 9px;
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+
+.card-githubLink {
+  font-size: 9px;
+  width: 100%;
+  border-radius: 4px;
+  padding: 2px 6px;
+  margin-top: 6px;
+  
+}
+
+.card-row .card
+{
+  width:350px;
+  height:400px;
+  max-height:500px;
+}
+
+.card-row .card-img
+{
+  object-fit: fill;
+}
+
+}
+
+@media (max-width:515px)
+{
+   .card-featured{
+      width:350px;
+      height:auto;
+      max-height:450px;
+    }
+
+    .card-row .card
+{
+  width:300px;
+  height:450px;
+  max-height:500px;
+}
+
+.card-row .card-img
+{
+  object-fit: fill;
+}
+
+.subhero-text
+{
+  font-size: 1.5rem;
+  top:12%;
+}
+
+.card-container{
+  padding:50px;
+}
+}
+
+@media (max-width:464px)
+{
+   .card-featured{
+      width:300px;
+      height:420px;
+      max-height:450px;
+    }
+
+    .card-row .card
+{
+  width:280px;
+  height:450px;
+  max-height:450px;
+}
+
+.card-row .card-description
+{
+  font-size:12px;
+}
+
+.card-row .card-title
+{
+  font-size: 14px;
+}
+
+.card-row 
+{
+  gap:80px;
+}
+
+.menu-btn img 
+{
+  width:35px;
+}
+
+.home-btn img 
+{
+  width:35px;
+}
+
+.filter-btn img 
+{
+  width:35px;
+}
+
+.filter-btn 
+{
+  top:11%;
+}
+
+ #category-filter{
+    top:16%;
+  
+  }
+
+}
+
+@media(max-width:410px)
+{
+  .card-featured{
+      width:260px;
+      height:420px;
+      max-height:450px;
+    }
+
+    .card-row .card
+{
+  width:230px;
+  height:500px;
+  max-height:500px;
+}
+
+.card-row{
+  gap:120px;
+}
+
+.card-container{
+  padding:30px;
+}
+}
+
+@media(max-width:370px)
+{
+  .card-featured{
+      width:210px;
+      height:auto;
+      max-height:500px;
+     
+      
+    }
+
+    .card-row .card
+{
+  width:200px;
+  height:550px;
+  max-height:550px;
+}
+
+.card-row{
+  gap:80px;
+}
+
+.card-container{
+  padding:10px;
+  margin-top: 150px;
+  margin-bottom:20px;
+}
+
+.subhero-text
+{
+  font-size: 1.2rem;
+}
+
+.home-btn{
+  top:4%;
+  right:6%;
+}
+
+.filter-btn
+{
+  right:6%;
+  top:10%;
+}
+
+.menu-btn{
+top:4%;
+}
+}
+
 
 
