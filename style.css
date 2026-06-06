@@ -366,9 +366,8 @@ body {
     display: none;
   }
 
-  .subtitle-text
-  {
-    top:43%;
+  .subtitle-text {
+    top: 43%;
   }
 }
 
@@ -469,12 +468,12 @@ body {
     overflow: visible;
   }
 
-  .home-btn img{
-    width:35px;
+  .home-btn img {
+    width: 35px;
   }
 
-  .menu-btn img{
-    width:35px;
+  .menu-btn img {
+    width: 35px;
   }
 }
 
