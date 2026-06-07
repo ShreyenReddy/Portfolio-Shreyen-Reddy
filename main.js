@@ -15,7 +15,7 @@ const projects = [
       "Developed a reverse version of 2048 in C++ where the game starts at 2058 and reduces down to 2. Implemented two AI agents with different strategies—a basic heuristic-based AI and a more advanced decision-making AI—to compete against each other. The system tracks performance by comparing completion time and number of moves taken.",
     coverimg: "./imgs/reverse2058_img.png",
     stack: ["C++", "Code::Blocks"],
-    githubRepo: "www",
+    githubRepo: "https://github.com/ShreyenReddy/Reverse-2058-Game",
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ const projects = [
       "Developed a Unity 6 survival game inspired by the 2026 World Cup, where the player controls the football instead of a traditional player. The objective is to evade AI-controlled international footballers attempting to kick the ball, with gameplay focused on movement, avoidance mechanics, and collision-based interactions.",
     coverimg: "./imgs/surviving-the-world-cup-new.png",
     stack: ["C#", "Unity 3D"],
-    githubRepo: "www",
+    githubRepo: "https://github.com/ShreyenReddy/Surviving-the-World-Cup-Game",
   },
 ]; //generate all cards from this array
 
