@@ -477,7 +477,7 @@ body {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 410px) {
   .card-container {
     padding: 600px 15px 15px 15px;
     overflow-y: auto;
@@ -496,7 +496,7 @@ body {
   }
 
   .home-btn img {
-    width: 40px;
+    width: 30px;
   }
 
   .card:hover {
@@ -505,9 +505,7 @@ body {
       0 0 0 20px rgba(255, 255, 255, 0.2),
       0 4px 24px rgba(0, 0, 0, 0.2);
   }
-}
 
-@media (max-width: 405px) {
   .card-container {
     padding: 250px 5px 5px 5px;
     gap: 30px;
@@ -554,3 +552,4 @@ body {
       0 2px 14px rgba(0, 0, 0, 0.2);
   }
 }
+
