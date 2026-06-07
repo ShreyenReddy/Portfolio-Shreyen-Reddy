@@ -507,7 +507,7 @@ body {
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 405px) {
   .card-container {
     padding: 250px 5px 5px 5px;
     gap: 30px;
