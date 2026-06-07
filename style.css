@@ -490,7 +490,7 @@ body {
 @media (max-width: 470px) {
   .card-container {
     padding: 40px;
-    margin-top: 110px;
+    margin-top: 80px;
    
     overflow-y: auto;
     overflow-x: hidden;
@@ -505,11 +505,22 @@ body {
   }
 
   .home-btn img {
-    width: 35px;
+    width: 30px;
   }
 
   .menu-btn img {
-    width: 35px;
+    width: 30px;
+  }
+
+  .home-btn{
+    top:3%;
+    right:5%;
+  }
+
+  .menu-btn
+  {
+    top:3%;
+    left:5%;
   }
 }
 
