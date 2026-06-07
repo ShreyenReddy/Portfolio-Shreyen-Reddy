@@ -12,7 +12,7 @@ const projects = [
     id: 2,
     title: "Reverse 2058",
     description:
-      "Developed a reverse version of 2048 in C++ where the game starts at 2058 and reduces down to 2. Implemented two AI agents with different strategies—a basic heuristic-based AI and a more advanced decision-making AI—to compete against each other. The system tracks performance by comparing completion time and number of moves taken.",
+      "Developed a reverse version of 2058 in C++ where the game starts at 2058 and reduces down to 2. Implemented two AI agents with different strategies—a basic heuristic-based AI and a more advanced decision-making AI—to compete against each other. The system tracks performance by comparing completion time and number of moves taken.",
     coverimg: "./imgs/reverse2058_img.png",
     stack: ["C++", "Code::Blocks"],
     githubRepo: "https://github.com/ShreyenReddy/Reverse-2058-Game",
@@ -65,7 +65,7 @@ function createProjectCard(project) {
 
   const githubLink = document.createElement("a");
   githubLink.href = project.githubRepo;
-  githubLink.textContent = "View Repository";
+  githubLink.textContent = "Click to view repository";
   githubLink.target = "_blank";
   githubLink.classList.add("card-githubLink");
 

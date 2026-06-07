@@ -226,10 +226,10 @@ body {
 }
 
 .card-stack {
-  font-size: 11px;
-  color: #1a1a1a;
+  font-size: 12px;
+  color: #f5f7fa;
   width: 100%;
-  background-color: #e0e0e0;
+  background-color: #02367b;
   border-radius: 6px;
   padding: 4px 8px;
   margin-top: auto;
@@ -239,7 +239,7 @@ body {
 /* Filter Button Code  */
 
 .card-githubLink {
-  font-size: 11px;
+  font-size: 12px;
   color: #1a1a1a;
   background-color: #e0e0e0;
   width: 100%;
@@ -415,10 +415,6 @@ body {
   .dropdown-content a:hover {
     background-color: #02367b;
     border-radius: 8px;
-  }
-
-  .next-btn {
-    display: none;
   }
 }
 
