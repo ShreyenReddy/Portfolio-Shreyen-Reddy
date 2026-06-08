@@ -517,11 +517,6 @@ body {
     overflow-x: visible;
   }
 
-  .card-list,
-  .card-paragraph {
-    overflow-y: auto;
-    max-height: 100%;
-  }
 
   .home-btn img {
     width: 30px;
@@ -588,7 +583,7 @@ body {
   }
 
   .card {
-    width: 100%;
+    width: 90%;
     height: 60vh;
     max-height: none;
     overflow-x:visible;
@@ -598,11 +593,7 @@ body {
     text-align: left;
   }
 
-  .card-list,
-  .card-paragraph {
-    overflow-y: auto;
-    max-height: 100%;
-  }
+  
 
   .menu-btn {
     left: 8%;
