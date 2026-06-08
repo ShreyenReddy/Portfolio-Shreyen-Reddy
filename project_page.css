@@ -34,11 +34,11 @@ body {
 }
 
 .secondary-nav-links {
-  position: static; /*nav bar wont move when i scroll  */
+  position: static; /*nav bar wont move when i scroll unlike buttons  */
   top: 10;
   left: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 10; /* high z index so nothing is overlapping */
   display: flex;
   justify-content: center;
   gap: 100px;
@@ -120,7 +120,7 @@ body {
 
 .card-container {
   display: flex;
-  flex-direction: column; /*stack featured on top of other cards */
+  flex-direction: column; /*place featured card on top of other cards */
   gap: 80px; /* gap between featured and row cards*/
   justify-content: center;
   padding: 100px 20px;
@@ -136,21 +136,15 @@ body {
   padding: 15px;
   width: 300px;
   height: 300px;
-
-  /* Cloud shape using border-radius
-  border-radius: 50% 50% 50% 50% / 30% 30% 30% 30%;
-  box-shadow:
-    0 0 0 18px rgba(255,255,255,0.3),
-    0 0 0 36px rgba(255,255,255,0.15),
-    0 8px 30px rgba(0, 0, 0, 0.15);  */
-
   text-align: center;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
-  /* will keep stack and githubLink at bottom of card always*/
+  /* transition onto card*/
+
   display: flex;
   flex-direction: column;
+  /* will keep stack and githubLink at bottom of card always*/
 }
 
 .card-featured {
@@ -165,7 +159,7 @@ body {
   width: 100%;
   height: auto;
   max-height: 300px;
-  object-fit: fill; /* fill the cover space , contain and cover were scaling img */
+  object-fit: fill; /* fill the cover space , contain and cover were scaling img and wasting space*/
   margin-bottom: 10px;
 }
 
@@ -218,7 +212,6 @@ body {
 .card-description {
   font-size: 14px;
   color: #1a1a1a;
-  /* margin-bottom: 20px; */
 }
 
 .card-featured .card-description {
@@ -276,6 +269,8 @@ body {
   display: none;
 }
 
+/* Code for Responsiveness starts here */
+
 @media (max-width: 1940px) {
   .card-container {
     margin: 100px;
@@ -303,8 +298,6 @@ body {
     width: 60%;
     height: 400px;
     max-height: 600px;
-
-    /* hide any overflow content */
   }
 
   .card-row .card-img {
@@ -355,7 +348,7 @@ body {
 
   .filter-btn {
     top: 15%;
-    left: auto; /*cancel out left positioning */
+    left: auto; /*cancel out left positioning from base */
     right: 5%;
   }
 
@@ -455,7 +448,7 @@ body {
 @media (max-width: 740px) {
   .card-featured {
     width: 500px;
-    height: auto;
+    height: auto; /* in filtered menu, set height does not show all info */
     max-height: 600px;
     padding: 20px;
   }

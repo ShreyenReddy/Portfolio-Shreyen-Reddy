@@ -76,13 +76,6 @@ function createProjectCard(project) {
   card.appendChild(stack);
   card.appendChild(githubLink);
 
-  // card.appendChild(title);
-  // card.appendChild(coverimg);
-  // card.appendChild(divider);
-  // card.appendChild(description);
-  // card.appendChild(stack);
-  // card.appendChild(githubLink);
-
   return card;
 }
 
@@ -143,25 +136,6 @@ function renderProjects(filteredProjects) {
   });
 }
 
-// function renderProjects(filteredProjects) {
-//   container.innerHTML = ""; // clears existing cards
-
-//   // always create the row div first
-//   const row = document.createElement("div");
-//   row.classList.add("card-row");
-//   row.id = "card-row";
-
-//   filteredProjects.map((project, index) => {
-//     const card = createProjectCard(project);
-//     if (index === 0) {
-//       card.classList.add("card-featured"); // first result always becomes featured
-//       container.appendChild(card);
-//       container.appendChild(row); // add row after featured
-//     } else {
-//       row.appendChild(card); // append to row directly, not querySelector
-//     }
-//   });
-// }
 //Controls dropdown feature of filter button
 const filterBtn = document.querySelector(".filter-btn");
 
@@ -172,53 +146,3 @@ filterBtn.addEventListener("click", function () {
     categoryFilter.style.display = "block";
   }
 });
-// filterBtn.addEventListener("click",function(event)=>
-// {
-
-// });
-
-// //Category Filter
-// const categoryFilter=document.querySelector("#category-filter");
-// categoryFilter.addEventListener("change",function(event)
-// {
-//   const selectedCategory= event.target.value;
-//   //create filtered list of jobs using that category
-//   const categorisedJobs=jobs.filter(job=>
-//   {
-//     if(selectedCategory==="all")
-//     {
-//       return job;
-//     }
-//     else
-//     {
-//       return job.type ===selectedCategory;
-//     }
-//   });
-
-//   renderJobs(categorisedJobs);
-// });
-
-// //1.Render Jobs
-// const jobContainer=document.querySelector(".job-container");
-
-// function renderJobs(jobList)
-// {
-
-//   jobContainer.innerHTML=" ";
-//   //renderJobs(jobs); makes function more flexible instead of multiple doing the same thing
-//   jobList.map(job=>
-//   {
-//     const card=document.createElement("div");
-//     card.classList.add("job-card");
-//     card.setAttribute('data-id',job.id);
-
-//     card.innerHTML=
-//     `<h2>${job.title}</h2>
-//     <p>${job.company} - ${job.location}</p>
-//     <p>R${job.salary} / month</p>
-
-//     <div class="job-details hidden">
-//     <p> Type: ${job.type}</p>
-//     <p>About the role: ${job.description}</p>
-//     </div>
-//     `;

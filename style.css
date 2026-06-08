@@ -26,7 +26,7 @@ body {
   width: 100%;
   height: calc(
     100vh - 40px
-  ); /* always fills exactly the screen height minus the borders */
+  ); /* always fills exactly the screen height minus the borders to prevent clash  */
   opacity: 1;
   object-fit: cover;
   display: block;
@@ -187,7 +187,6 @@ body {
 }
 
 .card-container {
-
   display: flex;
   gap: 100px;
   justify-content: center;
@@ -206,15 +205,7 @@ body {
   padding: 20px;
   width: 300px;
   height: 400px;
-  overflow-y: auto;
-
-  /* Cloud shape using border-radius
-  border-radius: 50% 50% 50% 50% / 30% 30% 30% 30%;
-  box-shadow:
-    0 0 0 18px rgba(255,255,255,0.3),
-    0 0 0 36px rgba(255,255,255,0.15),
-    0 8px 30px rgba(0, 0, 0, 0.15);  */
-
+  overflow-y: auto; /*will make biography flow out of page if removed*/
   text-align: left;
   transition:
     transform 0.3s ease,
@@ -265,11 +256,6 @@ body {
   text-align: left;
   margin-bottom: 10px;
 }
-
-
-
-
-
 
 .card-subheading {
   font-family: "Alegreya Sans SC", sans-serif;
@@ -356,7 +342,6 @@ body {
     height: auto;
     min-height: 100vh;
     overflow-y: auto;
-    
   }
 
   .card-container {
@@ -367,9 +352,7 @@ body {
     padding: 15px;
     margin-top: 140px;
     max-height: none;
-  
-    
-    
+
     /* padding-top: 150px; */
   }
 
@@ -383,7 +366,6 @@ body {
     font-size: 2rem;
     top: 10%;
   }
-
 
   .next-btn {
     display: none;
@@ -409,9 +391,8 @@ body {
 
   .card-container {
     padding: 40px;
-    margin-top:100px;
-   
-   
+    margin-top: 100px;
+
     overflow-y: auto;
   }
 }
@@ -420,9 +401,8 @@ body {
   .card-container {
     padding: 50px;
     margin-top: 110px;
-    overflow-y:auto;
+    overflow-y: auto;
   }
-
 }
 
 @media (max-width: 705px) {
@@ -432,7 +412,7 @@ body {
     align-items: center;
     gap: 50px;
     padding: 50px;
-    margin-top:100px;
+    margin-top: 100px;
     overflow-y: auto; /* allow cards themself to scroll not entire page 
     
     /* padding-top: 150px; */
@@ -470,7 +450,7 @@ body {
   .card-container {
     padding: 35px;
     margin-top: 120px;
-  
+
     overflow-y: auto;
     overflow-x: hidden;
     gap: 60px;
@@ -489,14 +469,14 @@ body {
       0 6px 30px rgba(0, 0, 0, 0.2);
   }
 
-  .menu-btn{
-    top:5%;
-    left:5%;
+  .menu-btn {
+    top: 5%;
+    left: 5%;
   }
 
-  .home-btn{
-    top:5%;
-    right:5%;
+  .home-btn {
+    top: 5%;
+    right: 5%;
   }
 }
 
@@ -504,10 +484,10 @@ body {
   .card-container {
     padding: 40px;
     margin-top: 80px;
-   
+
     overflow-y: auto;
     overflow-x: hidden;
-    gap:80px;
+    gap: 80px;
   }
   .card {
     width: 90%;
@@ -517,7 +497,6 @@ body {
     overflow-x: visible;
   }
 
-
   .home-btn img {
     width: 30px;
   }
@@ -526,15 +505,14 @@ body {
     width: 30px;
   }
 
-  .home-btn{
-    top:5%;
-    right:5%;
+  .home-btn {
+    top: 5%;
+    right: 5%;
   }
 
-  .menu-btn
-  {
-    top:5%;
-    left:5%;
+  .menu-btn {
+    top: 5%;
+    left: 5%;
   }
 
   .card:hover {
@@ -551,10 +529,8 @@ body {
     margin-top: 100px;
     overflow-y: auto;
     overflow-x: visible;
-    gap:60px;
+    gap: 60px;
   }
-
- 
 
   .menu-btn img {
     width: 30px;
@@ -564,19 +540,10 @@ body {
     width: 30px;
   }
 
-  .menu-btn{
-    top:5%;
-    left:5%;
+  .menu-btn {
+    top: 5%;
+    left: 5%;
   }
-
-  .card:hover {
-    box-shadow:
-      0 0 0 12px rgba(255, 255, 255, 0.35),
-      0 0 0 20px rgba(255, 255, 255, 0.2),
-      0 4px 24px rgba(0, 0, 0, 0.2);
-  }
-
-
 
   .subhero-text {
     font-size: 1.5rem;
@@ -586,14 +553,12 @@ body {
     width: 90%;
     height: 60vh;
     max-height: none;
-    overflow-x:visible;
+    overflow-x: visible; /*makes scroll possible in bio and other cards */
     word-wrap: break-word;
     overflow-wrap: break-word;
     font-size: 10px;
     text-align: left;
   }
-
-  
 
   .menu-btn {
     left: 8%;
@@ -620,13 +585,10 @@ body {
   }
 }
 
-  @media (max-width:350px)
-  {
-    .card{
-      width:220px;
-      height: 350px;
-      flex-shrink: 0;
-    }
+@media (max-width: 350px) {
+  .card {
+    width: 220px;
+    height: 350px;
+    flex-shrink: 0;
   }
-
-
+}
