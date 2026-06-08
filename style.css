@@ -192,7 +192,7 @@ body {
   gap: 100px;
   justify-content: center;
 
-  padding: 120px 20px;
+  padding: 90px 20px;
   flex-wrap: wrap;
 
   align-items: center;
@@ -203,9 +203,9 @@ body {
   margin-top: 20px;
   background-color: #f5f7fa;
   border-radius: 12px;
-  padding: 30px;
+  padding: 20px;
   width: 300px;
-  height: 450px;
+  height: 400px;
   overflow-y: auto;
 
   /* Cloud shape using border-radius
@@ -311,8 +311,8 @@ body {
   }
 
   .home-btn {
-    top: 40px;
-    right: 45px;
+    top: 45px;
+    right: 45px; /* pixels more accurate than % here*/
   }
 
   .menu-btn img {
@@ -383,12 +383,14 @@ body {
     font-size: 2rem;
     top: 10%;
   }
+
+
   .next-btn {
     display: none;
   }
 
   .subtitle-text {
-    top: 43%;
+    top: 45%;
   }
 }
 
@@ -401,7 +403,7 @@ body {
 
   .subtitle-text {
     font-size: 1rem;
-    top: 25%;
+    top: 27%;
     left: 50%;
   }
 
@@ -420,6 +422,7 @@ body {
     margin-top: 110px;
     overflow-y:auto;
   }
+
 }
 
 @media (max-width: 705px) {
@@ -441,8 +444,8 @@ body {
   }
 
   .menu-btn {
-    top: 3%;
-    left: 5%;
+    top: 7%;
+    left: 10%;
   }
 
   .menu-btn img {
@@ -452,8 +455,8 @@ body {
   }
 
   .home-btn {
-    top: 3%;
-    right: 5%;
+    top: 7%;
+    right: 10%;
   }
 
   .home-btn img {
@@ -485,6 +488,16 @@ body {
       0 0 0 28px rgba(255, 255, 255, 0.2),
       0 6px 30px rgba(0, 0, 0, 0.2);
   }
+
+  .menu-btn{
+    top:5%;
+    left:5%;
+  }
+
+  .home-btn{
+    top:5%;
+    right:5%;
+  }
 }
 
 @media (max-width: 470px) {
@@ -513,13 +526,13 @@ body {
   }
 
   .home-btn{
-    top:3%;
+    top:5%;
     right:5%;
   }
 
   .menu-btn
   {
-    top:3%;
+    top:5%;
     left:5%;
   }
 }
@@ -541,6 +554,11 @@ body {
 
   .home-btn img {
     width: 30px;
+  }
+
+  .menu-btn{
+    top:5%;
+    left:5%;
   }
 
   .card:hover {
@@ -581,7 +599,7 @@ body {
   }
 
   .subtitle-text {
-    top: 20%;
+    top: 21%;
   }
 
   .card:hover {
