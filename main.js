@@ -19,7 +19,7 @@ const projects = [
   },
   {
     id: 3,
-    title: "Reptile Dysfunction",
+    title: "Reptile World",
     description:
       "Collaborated in a team to develop a narrative-driven 3D game in Unity, with all assets modelled in Blender and imported into the engine. The game follows a space lizard protagonist who crash-lands on Earth and must explore the environment, collect ship parts, and repair their spacecraft to return home. ",
     coverimg: "./imgs/Reptile-Dysfunction-game.png",
